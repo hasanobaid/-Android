@@ -10,8 +10,13 @@ public class MovieList {
         movie.add(movies);
     }
 
-    public void deleteMovie(MovieList movies) {
-        movie.remove(movies);
+    public void deleteMovie(String title) {
+        for (int i=0 ; i<movie.size();i++){
+            if(movie.get(i).getName().equals(title)){
+                movie.remove(movie.get(i));
+
+            }
+        }
     }
 
     public List<MovieModle> getMovie() {

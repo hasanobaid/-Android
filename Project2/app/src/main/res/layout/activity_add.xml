@@ -7,15 +7,6 @@
     tools:context=".add">
 
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="647dp"
-        android:text="title"
-        />
-
     <EditText
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -23,17 +14,17 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="488dp"
+        android:layout_marginBottom="423dp"
         android:hint="title" />
 
     <TextView
         android:id="@+id/lablelength"
-        android:layout_width="match_parent"
+        android:layout_width="234dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/length"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="271dp"
+        android:layout_marginBottom="22dp"
         android:text="length" />
 
     <EditText
@@ -43,26 +34,45 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginBottom="185dp"
         android:hint="length" />
-
-    <TextView
-        android:id="@+id/detailslable"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="173dp"
-        android:text="Details" />
 
     <EditText
         android:id="@+id/details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lablelength"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="219dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginBottom="11dp"
         android:hint="Details" />
+
+    <TextView
+        android:id="@+id/titleLable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/title"
+        android:layout_marginBottom="31dp"
+        android:text="tite" />
+
+    <TextView
+        android:id="@+id/detailslable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="374dp"
+        android:text="details" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="169dp"
+        android:layout_marginBottom="76dp"
+        android:onClick="onClickAdd"
+        android:text="add" />
 </RelativeLayout>

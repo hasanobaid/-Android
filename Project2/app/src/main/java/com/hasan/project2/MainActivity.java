@@ -17,9 +17,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.hasan.project2.Modle.MovieList;
 import com.hasan.project2.Modle.MovieModle;
+
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,14 +37,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -91,18 +86,12 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.insert) {
-
-        } else if (id == R.id.add) {
+        if (id == R.id.add) {
             Intent intent = new Intent(MainActivity.this, add.class);
             startActivity(intent);
         } else if (id == R.id.delete) {
-            Intent intent = new Intent(MainActivity.this , delete.class );
+            Intent intent = new Intent(MainActivity.this, delete.class);
             startActivity(intent);
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -112,17 +101,20 @@ public class MainActivity extends AppCompatActivity
 
     public void toListDetailes() {
         list = (ListView) findViewById(R.id.list);
-        MovieList movieList = new MovieList() ;
-        movieList.addMovie(new MovieModle("lal","lal","lal"));
-        MovieModle[] movie = new MovieModle[movieList.getMovie().size()];
-        for (int i =0;i<movie.length;i++){
-            movie[i]=movieList.getMovie().get(i);
+
+        if (MovieList.movie.isEmpty()) {
+            MovieList.movie.add(new MovieModle("Small Foot", "1:45", "Genres: Comedy/Kids\nMigo is a friendly Yeti whose world gets turned upside down when he discovers something new", R.drawable.movie1, 4, true));
+            MovieList.movie.add(new MovieModle("Guardians of the Galaxy", "2:00", "Genres: Action/Sci-Fi\nPeter Quill finds himself the quarry of relentless bounty hunters after he steals ann orb coveted by a powerful villain", R.drawable.movie2, 4, true));
+            MovieList.movie.add(new MovieModle("The Avengers", "2:30", "Genres: Action/Thriller\nWhen Thor's evil brother Loki gains access to an unlimited power S.H.I.E.L.D iniates a superhero squad to stop and defeat the unprecedented threat to Earth", R.drawable.movie3, 4, true));
+            MovieList.movie.add(new MovieModle("Harry Potter and The Order of the Phoenix", "2:00", "Genres: Thriller/Mystery\nHarry Potter learns many in the wizarding community do not know the truth about his encounter with Voldemort", R.drawable.movie4, 4, true));
+            MovieList.movie.add(new MovieModle("Little Man", "1:30", "Genres: Comedy\nCalvin a short and tiny criminal must pose as a young infant in order to retrieve a stolen diamond who was lost by his idiot partner", R.drawable.movie5, 4, true));
         }
+
 
         ArrayAdapter<MovieModle> listAdapter = new ArrayAdapter<MovieModle>(this,
                 android.R.layout.simple_list_item_1,
-                movie);
-list.setAdapter(listAdapter);
+                MovieList.movie);
+        list.setAdapter(listAdapter);
 
         AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
             @Override
@@ -132,11 +124,11 @@ list.setAdapter(listAdapter);
                                     long id) {
                 Intent intent = new Intent(MainActivity.this,
                         detailes.class);
-                intent.putExtra("id", (int)id);
+                intent.putExtra("id", (int) id);
                 startActivity(intent);
-
             }
         };
+
         list.setOnItemClickListener(itemClickListener);
 
 

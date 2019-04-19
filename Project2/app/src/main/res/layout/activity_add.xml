@@ -19,12 +19,12 @@
 
     <TextView
         android:id="@+id/lablelength"
-        android:layout_width="234dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/length"
+        android:layout_width="407dp"
+        android:layout_height="29dp"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="22dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="232dp"
         android:text="length" />
 
     <EditText
@@ -34,35 +34,35 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="185dp"
+        android:layout_marginBottom="174dp"
         android:hint="length" />
 
     <EditText
         android:id="@+id/details"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/lablelength"
+        android:layout_height="58dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="224dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginTop="261dp"
+        android:layout_marginBottom="284dp"
         android:hint="Details" />
 
     <TextView
         android:id="@+id/titleLable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/title"
-        android:layout_marginBottom="31dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="489dp"
         android:text="tite" />
 
     <TextView
         android:id="@+id/detailslable"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="374dp"
+        android:layout_marginBottom="371dp"
         android:text="details" />
 
     <Button

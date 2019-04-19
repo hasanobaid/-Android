@@ -1,6 +1,7 @@
 package com.hasan.project2;
 
 import android.content.Intent;
+import android.graphics.Movie;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -14,7 +15,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.hasan.project2.Modle.MovieList;
+import com.hasan.project2.Modle.MovieModle;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -25,7 +30,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toListDetailes();
-        ;
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -87,13 +92,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.insert) {
-            // Handle the camera action
+
         } else if (id == R.id.add) {
-
-        } else if (id == R.id.insert) {
-
+            Intent intent = new Intent(MainActivity.this, add.class);
+            startActivity(intent);
         } else if (id == R.id.delete) {
-
+            Intent intent = new Intent(MainActivity.this , delete.class );
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
@@ -107,19 +112,33 @@ public class MainActivity extends AppCompatActivity
 
     public void toListDetailes() {
         list = (ListView) findViewById(R.id.list);
+        MovieList movieList = new MovieList() ;
+        movieList.addMovie(new MovieModle("lal","lal","lal"));
+        MovieModle[] movie = new MovieModle[movieList.getMovie().size()];
+        for (int i =0;i<movie.length;i++){
+            movie[i]=movieList.getMovie().get(i);
+        }
+
+        ArrayAdapter<MovieModle> listAdapter = new ArrayAdapter<MovieModle>(this,
+                android.R.layout.simple_list_item_1,
+                movie);
+list.setAdapter(listAdapter);
+
         AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent,
                                     View view,
                                     int position,
                                     long id) {
-                if (position == 0) {
-                    Intent intent = new Intent(MainActivity.this, detailes.class);
-                    startActivity(intent);
-                }
+                Intent intent = new Intent(MainActivity.this,
+                        detailes.class);
+                intent.putExtra("id", (int)id);
+                startActivity(intent);
+
             }
         };
-
         list.setOnItemClickListener(itemClickListener);
+
+
     }
 }

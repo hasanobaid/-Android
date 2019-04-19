@@ -48,9 +48,10 @@ public class detailes extends AppCompatActivity {
 
         title.setText(m.getName());
         detail.setText(m.getDetails());
-        length.setText(m.getLength());
+        length.setText("Running Time: " + m.getLength());
         imageView2.setImageResource(m.getPosterID());
         rating.setRating((float) m.getRating());
+        watched.setEnabled(false);
         if (m.isWatched()) {
             watched.setChecked(true);
         }

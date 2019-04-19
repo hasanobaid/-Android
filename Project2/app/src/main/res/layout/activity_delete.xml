@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="168dp"
-        android:layout_marginBottom="107dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="109dp"
         android:onClick="onClickDelete"
         android:text="delete" />
 
@@ -35,5 +35,5 @@
         android:layout_above="@+id/delete"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="145dp" />
+        android:layout_marginBottom="224dp" />
 </RelativeLayout>

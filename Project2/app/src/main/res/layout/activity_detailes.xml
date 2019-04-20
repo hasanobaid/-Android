@@ -9,13 +9,13 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="197dp"
+        android:layout_height="285dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="433dp"
+        android:layout_marginBottom="446dp"
         android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/avatars" />
 

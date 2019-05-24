@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Laptop"
+        android:layout_margin="10dp"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manufacturer Company: "
+        android:layout_below="@+id/header"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type: "
+        android:layout_below="@+id/company"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Price: "
+        android:layout_below="@+id/type"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_margin="10dp"
+        />
+
+    <EditText
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_margin="10dp"
+        android:editable="false"/>
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"
+        android:layout_below="@+id/price"
+        android:onClick="OnClickSave"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Laptop"
+        android:layout_toRightOf="@+id/edit"
+        android:layout_below="@+id/price"
+        android:onClick="OnClickDelete"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

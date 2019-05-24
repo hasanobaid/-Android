@@ -8,7 +8,34 @@
             android:id="@+id/add"
             android:icon="@drawable/ic_menu_camera"
             android:title="Add" />
+<<<<<<< HEAD
 
     </group>
 
+=======
+        <item
+            android:id="@+id/update"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="update" />
+        <item
+            android:id="@+id/delete"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="delete" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
 </menu>

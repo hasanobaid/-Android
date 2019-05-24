@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hasan.labtopapplication">
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
+=======
+
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Add"></activity>
+<<<<<<< HEAD
         <activity android:name=".Edit"></activity>
+=======
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

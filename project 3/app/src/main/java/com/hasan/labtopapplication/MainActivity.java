@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -32,11 +33,19 @@ import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+=======
+import android.widget.ListView;
+import android.widget.Toast;
+
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+<<<<<<< HEAD
 import java.net.MalformedURLException;
+=======
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -70,7 +79,10 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         list = (ListView) findViewById(R.id.list);
         getData();
+<<<<<<< HEAD
 
+=======
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
     }
 
     @Override
@@ -98,6 +110,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+<<<<<<< HEAD
+=======
+        if (id == R.id.action_settings) {
+            return true;
+        }
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
 
         return super.onOptionsItemSelected(item);
     }
@@ -111,6 +129,14 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.add) {
             Intent intent = new Intent(this, Add.class);
             startActivity(intent);
+<<<<<<< HEAD
+=======
+        } else if (id == R.id.delete) {
+
+        } else if (id == R.id.update) {
+
+
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -120,7 +146,11 @@ public class MainActivity extends AppCompatActivity
 
     public void getData() {
 
+<<<<<<< HEAD
         String url = "http://192.168.1.109/project3/get.php";
+=======
+        String url = "http://10.0.2.2/project3/get.php";
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.INTERNET)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -201,6 +231,7 @@ public class MainActivity extends AppCompatActivity
 
         @Override
         protected void onPostExecute(String result) {
+<<<<<<< HEAD
             Gson gson;
             gson = new Gson();
             final Laptop[] laptops = gson.fromJson(result,Laptop[].class);
@@ -226,6 +257,17 @@ public class MainActivity extends AppCompatActivity
 
             };
             list.setOnItemClickListener(itemClickListener);
+=======
+            Toast.makeText(getBaseContext(), result, Toast.LENGTH_LONG).show();
+            //String[] books = result.split(",");
+            //String str = "";
+            //for(String s : books){
+            //    str+= s + "\n";
+            // }
+            //fill list view
+//            EditText edtData = (EditText)findViewById(R.id.edtData);
+//            edtData.setText(result);
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
         }
     }
 

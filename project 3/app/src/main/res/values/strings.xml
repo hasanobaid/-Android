@@ -1,5 +1,9 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">Laptop Application</string>
+=======
+    <string name="app_name">Labtop Application</string>
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>

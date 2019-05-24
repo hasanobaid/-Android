@@ -122,7 +122,11 @@ public class Add extends AppCompatActivity {
 
     public void OnClickAdd(View view) {
 
+<<<<<<< HEAD
         String restUrl = "http://192.168.1.109/project3/add.php";
+=======
+        String restUrl = "http://10.0.2.2/project3/add.php";
+>>>>>>> b8609765b1730b61a10c07fdb714b2b5d46446f1
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.INTERNET)
                 != PackageManager.PERMISSION_GRANTED) {
